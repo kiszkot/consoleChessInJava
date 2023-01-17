@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"szachy","l":"Bierka"},{"p":"szachy","l":"Goniec"},{"p":"szachy","l":"Hetman"},{"p":"szachy","l":"Krol"},{"p":"plansza","l":"Main"},{"p":"szachy","l":"Pionek"},{"p":"szachy","l":"Skoczek"},{"p":"plansza","l":"Szachownica"},{"p":"szachy","l":"Wieza"}]

@@ -1,0 +1,36 @@
+	/**
+	 * Checks if the piece position matches the position on the board, if not it moves it and restores taken pieces
+	 */
+	private void checkBoard() {
+		Bierka tmp;
+		for(int i=0; i<8; i++) {
+			for(int j=0; j<8; j++) {
+				tmp = board[i][j];
+				if(tmp != null) {
+					if(tmp.getPosition().compareTo(unparseH.get(j) + String.valueOf(i+1)) != 0) {
+						move(unparseH.get(j) + String.valueOf(i+1), tmp.getPosition(), board, takes);
+					}
+				}
+			}
+		}
+		for(String t : takes) {
+			if(graveyard.containsKey(t)) {
+				int[] pos = parsePosition(t);
+				board[pos[0]][pos[1]] = graveyard.get(t);
+			}
+		}
+	}
+	
+	/**
+	 * Checks if the current Pawn did an En Passant
+	 * @return boolean
+	 */
+	public boolean hasEnPassed() {return enPassant;}
+	
+	/**
+	 * Sets enPassant to TRUE or FALSE
+	 * @param value The value to set enPassant to
+	 */
+	public void setEnPassant(boolean value) {
+		enPassant = value;
+	}
